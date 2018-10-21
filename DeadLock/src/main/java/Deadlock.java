@@ -1,6 +1,6 @@
-public class Deadlock extends Thread {
-    FirstClass firstClass = new FirstClass();
-    SecondClass secondClass = new SecondClass();
+class Deadlock extends Thread {
+    private final FirstClass firstClass = new FirstClass();
+    private final SecondClass secondClass = new SecondClass();
 
     Deadlock() {
         Thread.currentThread().setName("Первый поток");
