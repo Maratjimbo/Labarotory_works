@@ -23,7 +23,7 @@ public class MyWriteThread extends Thread {
     }
 
 
-    public int makeTaskOrder(){
+    public void makeTaskOrder(){
         Random rnd = new Random();
         for(int i = 0; i < 100; i++){
             order_of_task.add(rnd.nextInt(1));
