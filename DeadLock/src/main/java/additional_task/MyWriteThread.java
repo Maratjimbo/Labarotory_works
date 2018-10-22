@@ -3,12 +3,12 @@ package additional_task;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MyWriteThread extends Thread {
+class MyWriteThread extends Thread {
 
     private ArrayList<Integer>order_of_task;
     private MyRandomSyncList myRandomSyncList;
     private MyRandomList myRandomList;
-    private boolean flag;
+    private final boolean flag;
 
     public MyWriteThread(MyRandomList list){
         myRandomList = list;
@@ -23,7 +23,7 @@ public class MyWriteThread extends Thread {
     }
 
 
-    public void makeTaskOrder(){
+    private void makeTaskOrder(){
         Random rnd = new Random();
         for(int i = 0; i < 100; i++){
             order_of_task.add(rnd.nextInt(1));

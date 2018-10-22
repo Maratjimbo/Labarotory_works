@@ -2,11 +2,14 @@ package additional_task;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Random;
 
-public class MyRandomSyncList {
-    List<Integer> linkedlist;
+class MyRandomSyncList {
+    private List<Integer> linkedlist;
+
+    public MyRandomSyncList(){
+        linkedlist = new LinkedList<Integer>();
+    }
 
     public synchronized void addNumber(){
         Random rnd = new Random();
@@ -26,15 +29,13 @@ public class MyRandomSyncList {
         linkedlist.remove(tmp_index);
     }
 
-    public synchronized int calcZero(){
+    public synchronized void calcZero(){
         int zeroValue = 0;
-        ListIterator<Integer> listIterator = linkedlist.listIterator();
-        while(listIterator.hasNext()){
-            if(listIterator.next() == 0){
+        for (Integer aLinkedlist : linkedlist) {
+            if (aLinkedlist == 0) {
                 zeroValue++;
             }
         }
-        return zeroValue;
     }
 }
 
