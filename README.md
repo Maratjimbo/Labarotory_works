@@ -25,9 +25,9 @@ In coming
 Client:
 
 нояб. 07, 2018 10:12:58 AM Client main
-\nINFO: Enter the port of server: 
-\n33333
-\nнояб. 07, 2018 10:13:01 AM Client main
+INFO: Enter the port of server: 
+33333
+нояб. 07, 2018 10:13:01 AM Client main
 INFO: Server connection established
 нояб. 07, 2018 10:13:01 AM Client main
 INFO: Available command: 
