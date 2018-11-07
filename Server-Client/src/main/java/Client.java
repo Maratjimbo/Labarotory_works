@@ -20,7 +20,6 @@ class Client {
             DataOutputStream oos = new DataOutputStream(socket.getOutputStream());
             DataInputStream ois = new DataInputStream(socket.getInputStream())	)
         {
-
             logger.info("Server connection established");
             String in = ois.readUTF();
             logger.info(in);
@@ -41,13 +40,11 @@ class Client {
                     }
                     logger.info("Wait message from server");
                     in = ois.readUTF();
-                    logger.info("Message from server: " + in);
+                    logger.info("Server : " + in);
                     logger.info("Enter your message to server:");
                 }
             }
-
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

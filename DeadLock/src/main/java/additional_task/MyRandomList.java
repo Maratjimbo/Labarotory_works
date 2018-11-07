@@ -1,8 +1,10 @@
 package additional_task;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Logger;
 
 class MyRandomList {
     private List<Integer> linkedlist;
@@ -31,11 +33,14 @@ class MyRandomList {
 
     int calcZero(){
         int zeroValue = 0;
-        for (Integer aLinkedlist : linkedlist) {
-            if (aLinkedlist == 0) {
+        Iterator<Integer> iterator = linkedlist.iterator();
+        while (iterator.hasNext()){
+            Integer value = iterator.next();
+            if(value == 0){
                 zeroValue++;
             }
         }
         return zeroValue;
     }
+
 }

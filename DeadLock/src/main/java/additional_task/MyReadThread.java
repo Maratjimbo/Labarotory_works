@@ -1,5 +1,7 @@
 package additional_task;
 
+import java.util.logging.Logger;
+
 class MyReadThread extends Thread {
     private MyRandomSyncList myRandomSyncList;
     private MyRandomList myRandomList;
@@ -19,10 +21,10 @@ class MyReadThread extends Thread {
     public void run(){
         for(int i = 0; i < 15; i++){
             if(flag){
-                myRandomSyncList.calcZero();
+                System.out.println("zeroValue in RandomSyncList = " + myRandomSyncList.calcZero());
             }
             else{
-                myRandomList.calcZero();
+                System.out.println("zeroValue in RandomList = " + myRandomList.calcZero());
             }
         }
     }

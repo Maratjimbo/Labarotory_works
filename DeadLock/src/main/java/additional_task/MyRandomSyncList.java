@@ -1,5 +1,6 @@
 package additional_task;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -29,13 +30,15 @@ class MyRandomSyncList {
         linkedlist.remove(tmp_index);
     }
 
-    public synchronized void calcZero(){
+    public synchronized int calcZero(){
         int zeroValue = 0;
-        for (Integer aLinkedlist : linkedlist) {
-            if (aLinkedlist == 0) {
+        Iterator<Integer> iterator = linkedlist.iterator();
+        while (iterator.hasNext()){
+            Integer value = iterator.next();
+            if(value == 0){
                 zeroValue++;
             }
         }
+        return zeroValue;
     }
 }
-
